@@ -6,10 +6,12 @@
     <string name="nav_header_subtitle">Es liegt in deiner Natur!</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
+    <string name="submit_button">Weiter</string>
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="quiz_text">Wie Primal bist du eigentlich?</string>
+    <string name="quiz_text">Quiz</string>
+    <string name="title_quiz_question">Primal Test (%1$d/%2$d)</string>
+
     <string name="home_second">Home Second</string>
 </resources>
