@@ -44,5 +44,18 @@
         android:id="@+id/nav_quizFragment"
         android:name="com.example.primallifestyle.ui.quiz.QuizFragment"
         android:label="QuizFragment"
-        tools:layout="@layout/fragment_quiz" />
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_nav_quizFragment_to_quizErgebnisFragment"
+            app:destination="@id/quizErgebnisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizErgebnisFragment"
+        android:name="com.example.primallifestyle.ui.quiz.QuizErgebnisFragment"
+        android:label="fragment_quiz_ergebnis"
+        tools:layout="@layout/fragment_quiz_ergebnis" >
+        <action
+            android:id="@+id/action_quizErgebnisFragment_to_nav_quizFragment"
+            app:destination="@id/nav_quizFragment" />
+    </fragment>
 </navigation>
