@@ -1,4 +1,4 @@
-package com.example.primallifestyle.ui.slideshow
+package com.example.primallifestyle.ui.myprofile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.primallifestyle.R
 
-class SlideshowFragment : Fragment() {
+class MyProfileFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var myProfileViewModel: MyProfileViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
+        myProfileViewModel =
+                ViewModelProviders.of(this).get(MyProfileViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_myprofile, container, false)
+        val textView: TextView = root.findViewById(R.id.editName)
+        myProfileViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
