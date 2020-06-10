@@ -56,9 +56,10 @@ class QuizFragment : Fragment() {
 
         // Sets the question index to the first question.
         randomizeQuestions()
-
         // Bind this fragment class to the layout
         binding.quiz = this
+
+        var score = 0
 
         // Set the onClickListener for the submitButton
         binding.submitButton.setOnClickListener { view: View ->
@@ -66,7 +67,6 @@ class QuizFragment : Fragment() {
             // Do nothing if nothing is checked (id == -1)
             if (-1 != checkedId) {
                 var answerIndex = 0
-                var score = 0
                 when (checkedId) {
                     R.id.firstAnswerRadioButton -> answerIndex = 0
                     R.id.secondAnswerRadioButton -> answerIndex = 1
@@ -101,7 +101,11 @@ class QuizFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         // We've won!  Navigate to the gameWonFragment.
-                        view.findNavController().navigate(R.id.action_nav_quizFragment_to_quizErgebnisFragment)
+                        //view.findNavController().navigate(R.id.action_nav_quizFragment_to_quizErgebnisFragment)
+                        val action = QuizFragmentDirections.actionNavQuizFragmentToQuizErgebnisFragment(
+                            score.toString()
+                        )
+                        view.findNavController().navigate(action)
                     }
                 }
             }
