@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_quizFragment"
         android:name="com.example.primallifestyle.ui.quiz.QuizFragment"
-        android:label="QuizFragment"
+        android:label="Quiz"
         tools:layout="@layout/fragment_quiz" >
         <action
             android:id="@+id/action_nav_quizFragment_to_quizErgebnisFragment"
@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/quizErgebnisFragment"
         android:name="com.example.primallifestyle.ui.quiz.QuizErgebnisFragment"
-        android:label="fragment_quiz_ergebnis"
+        android:label="Dein Primal Ergebnis"
         tools:layout="@layout/fragment_quiz_ergebnis" >
         <argument
             android:name="score"

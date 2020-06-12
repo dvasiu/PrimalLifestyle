@@ -116,16 +116,19 @@
             <Button
                 android:id="@+id/submitButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginStart="@dimen/question_horizontal_margin"
                 android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/question_horizontal_margin"
+                android:layout_marginBottom="32dp"
                 android:text="@string/submit_button"
                 android:textSize="@dimen/button_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/scoreText"
