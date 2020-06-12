@@ -74,29 +74,28 @@ class QuizFragment : Fragment() {
                     R.id.fourthAnswerRadioButton -> answerIndex = 3
                     R.id.fifthAnswerRadioButton -> answerIndex = 4
                 }
-                // The first answer in the original question is always the correct one, so if our
-                // answer matches, we have the correct answer.
+
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
-                    score + 10
+                    score += 10
                 }
                 if (answers[answerIndex] == currentQuestion.answers[1]) {
-                    score + 7.5
+                    score += 8
                 }
                 if (answers[answerIndex] == currentQuestion.answers[2]) {
-                    score + 5
+                    score += 6
                 }
                 if (answers[answerIndex] == currentQuestion.answers[3]) {
-                    score + 2.5
+                    score += 4
                 }
                 if (answers[answerIndex] == currentQuestion.answers[4]) {
-                    score + 0
+                    score += 3
                 }
 
                     // Advance to the next question
                 questionIndex++
                     if (questionIndex < numQuestions) {
                         currentQuestion = questions[questionIndex]
-
+                        println(score)
                         setQuestion()
                         binding.invalidateAll()
                     } else {
