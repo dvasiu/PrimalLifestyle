@@ -22,8 +22,8 @@
     <string name="labelAge">Alter</string>
     <string name="editAge">Gib dein Alter ein</string>
     <string name="home_second">Home Second</string>
-    <string name="quizErgebnisText">Du bist %n Primal!</string>
-    <string name="next_match">Next Match</string>
+    <string name="quizErgebnisText">Dein Ergebnis:</string>
+    <string name="next_match">Erneut antworten</string>
     <string name="primallifestylelogo">primalLifestyleLogo</string>
     <string name="save_button">Speichern</string>
     <string name="score">score</string>
@@ -34,6 +34,8 @@
     <string name="labelCalories">Kalorienbedarf</string>
     <string name="CaloriesHint">Dein Kalorienbedarf</string>
     <string name="labelScore">Primal Score</string>
+    <string name="abbrechen">Abbrechen</string>
+    <string name="score_im_profil_speichern">Score im Profil speichern</string>
     <string-array name="arrayGender">
         <item>Männlich</item>
         <item>Weiblich</item>
