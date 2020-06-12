@@ -8,11 +8,13 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.example.primallifestyle.R
 import com.example.primallifestyle.ui.database.PrimalDatabase
 import com.example.primallifestyle.databinding.FragmentMyprofileBinding
 import com.example.primallifestyle.ui.quiz.QuizFragment
 import kotlinx.android.synthetic.main.fragment_quiz.*
+import kotlinx.coroutines.CoroutineScope
 
 
 class MyProfileFragment : Fragment() {
@@ -39,6 +41,9 @@ class MyProfileFragment : Fragment() {
             ViewModelProvider(this, viewModelFactory).get(MyProfileViewModel::class.java)
         binding.myProfileViewModel = myProfileViewModel
         binding.setLifecycleOwner(this)
+        binding.editButton.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_nav_myprofile_to_nav_myprofile_edit)
+        }
 //        binding.nonEditScore.text = testingVar
 
         return binding.root

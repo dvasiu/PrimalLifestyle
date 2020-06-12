@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_home"/>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.primallifestyle.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_training"
+        android:name="com.example.primallifestyle.ui.trainingsplan.TrainingsplanFragment"
+        android:label="@string/menu_training"
+        tools:layout="@layout/fragment_trainingsplan" />
 
     <fragment
         android:id="@+id/nav_quizFragment"
@@ -46,6 +46,17 @@
         android:name="com.example.primallifestyle.ui.myprofile.MyProfileFragment"
         android:label="@string/menu_myprofile"
         tools:layout="@layout/fragment_myprofile">
+        <action
+            android:id="@+id/action_nav_myprofile_to_nav_myprofile_edit"
+            app:destination="@id/nav_myprofile_edit" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_myprofile_edit"
+        android:name="com.example.primallifestyle.ui.myprofile_edit.MyProfileFragmentEdit"
+        android:label="@string/menu_myprofile_edit" >
+        <action
+            android:id="@+id/action_nav_myprofile_edit_to_nav_myprofile"
+            app:destination="@id/nav_myprofile" />
     </fragment>
 
 </navigation>

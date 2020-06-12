@@ -128,7 +128,7 @@
 
         <!-- EditText - right side of the fragment -->
 
-        <EditText
+        <TextView
             android:id="@+id/editUsername"
             android:layout_width="200dp"
             android:layout_height="40dp"
@@ -136,41 +136,36 @@
             android:layout_marginEnd="40dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/editUsername"
-            android:inputType="textPersonName"
+
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/guideline6" />
 
-        <EditText
+        <TextView
             android:id="@+id/editAge"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="40dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/editAge"
-            android:inputType="number"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editUsername" />
 
-        <EditText
+        <TextView
             android:id="@+id/editWeight"
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="40dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/editWeight"
-            android:inputType="number"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editAge" />
 
-        <Spinner
+        <TextView
             android:id="@+id/editGender"
             android:layout_width="130dp"
             android:layout_height="40dp"
@@ -178,8 +173,6 @@
             android:layout_marginEnd="40dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/editGender"
-            android:inputType="number"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editWeight" />
@@ -228,14 +221,14 @@
             app:layout_constraintTop_toBottomOf="@+id/nonEditCalories" />
 
         <Button
-            android:id="@+id/save_button"
+            android:id="@+id/edit_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="48dp"
-            android:text="@string/save_button"
+            android:text="@string/edit_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.007"

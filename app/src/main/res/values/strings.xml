@@ -1,43 +1,59 @@
 <resources>
-    <string name="app_name">PrimalLifestyle</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Primal Lifestyle</string>
-    <string name="nav_header_subtitle">Es liegt in deiner Natur!</string>
+    <string name="app_name">Primal Lifestyle</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
-    <string name="submit_button">Weiter</string>
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_myprofile">Mein Profil</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="quiz_text">Quiz</string>
     <string name="title_quiz_question">Primal Test (%1$d/%2$d)</string>
-    <string name="labelWeight">Gewicht</string>
-    <string name="editWeight">Gib dein Gewicht ein</string>
-    <string name="labelName">Dein Name</string>
-    <string name="editName">Gib deinen Namen ein</string>
-    <string name="labelUsername">Username</string>
-    <string name="editUsername">Gib deinen Usernamen ein</string>
-    <string name="labelAge">Alter</string>
-    <string name="editAge">Gib dein Alter ein</string>
     <string name="home_second">Home Second</string>
     <string name="quizErgebnisText">Dein Ergebnis:</string>
-    <string name="next_match">Erneut antworten</string>
     <string name="primallifestylelogo">primalLifestyleLogo</string>
-    <string name="save_button">Speichern</string>
     <string name="score">score</string>
-    <string name="labelGender">Geschlecht</string>
-    <string name="editGender">Wähle dein Geschlecht</string>
-    <string name="labelBMI">BMI</string>
     <string name="autoBMI">Dein BMI</string>
-    <string name="labelCalories">Kalorienbedarf</string>
     <string name="CaloriesHint">Dein Kalorienbedarf</string>
-    <string name="labelScore">Primal Score</string>
+
+        <!-- MENU & NAVIGATION -->
+    <string name="nav_header_title">Primal Lifestyle</string>
+    <string name="nav_header_subtitle">Es liegt in deiner Natur!</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_myprofile">Mein Profil</string>
+
+    <string name="quiz_text">Quiz</string>
+    <string name="menu_training">Trainingspläne</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+        <!-- BUTTONS -->
+    <string name="action_settings">Settings</string>
+    <string name="submit_button">Weiter</string>
+    <string name="next_match">Erneut antworten</string>
+    <string name="save_button">Speichern</string>
+    <string name="edit_button">Ändern</string>
     <string name="abbrechen">Abbrechen</string>
     <string name="score_im_profil_speichern">Score im Profil speichern</string>
+    <string name="menu_myprofile_edit">myprofile_edit</string>
+
+
+        <!-- EDITABLE-->
+    <string name="editWeight">Gib dein Gewicht ein</string>
+    <string name="editName">Gib deinen Namen ein</string>
+    <string name="editUsername">Gib deinen Usernamen ein</string>
+    <string name="editAge">Gib dein Alter ein</string>
+    <string name="editGender">Wähle dein Geschlecht</string>
     <string-array name="arrayGender">
         <item>Männlich</item>
         <item>Weiblich</item>
     </string-array>
+
+
+        <!-- LABELS -->
+    <string name="labelWeight">Gewicht</string>
+    <string name="labelName">Dein Name</string>
+    <string name="labelUsername">Username</string>
+    <string name="labelAge">Alter</string>
+    <string name="labelGender">Geschlecht</string>
+    <string name="labelBMI">BMI</string>
+    <string name="labelCalories">Kalorienbedarf</string>
+    <string name="labelScore">Primal Score</string>
+
 </resources>
