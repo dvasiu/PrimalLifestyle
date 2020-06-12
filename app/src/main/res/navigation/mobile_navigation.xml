@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_quizFragment"
         android:name="com.example.primallifestyle.ui.quiz.QuizFragment"
-        android:label="Quiz"
+        android:label="@string/quiz_text"
         tools:layout="@layout/fragment_quiz" >
         <action
             android:id="@+id/action_nav_quizFragment_to_quizErgebnisFragment"
@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/quizErgebnisFragment"
         android:name="com.example.primallifestyle.ui.quiz.QuizErgebnisFragment"
-        android:label="Dein Primal Ergebnis"
+        android:label="@string/primal_score"
         tools:layout="@layout/fragment_quiz_ergebnis" >
         <argument
             android:name="score"
@@ -50,6 +50,7 @@
             android:id="@+id/action_nav_myprofile_to_nav_myprofile_edit"
             app:destination="@id/nav_myprofile_edit" />
     </fragment>
+
     <fragment
         android:id="@+id/nav_myprofile_edit"
         android:name="com.example.primallifestyle.ui.myprofile_edit.MyProfileFragmentEdit"
@@ -58,5 +59,17 @@
             android:id="@+id/action_nav_myprofile_edit_to_nav_myprofile"
             app:destination="@id/nav_myprofile" />
     </fragment>
+
+    <fragment
+    android:id="@+id/nav_bmi"
+    android:name="com.example.primallifestyle.ui.bmi.BMIFragment"
+    android:label="@string/menu_bmi"
+    tools:layout="@layout/fragment_bmi" />
+
+    <fragment
+        android:id="@+id/nav_calories"
+        android:name="com.example.primallifestyle.ui.calories.CaloriesFragment"
+        android:label="@string/menu_calories_calc"
+        tools:layout="@layout/fragment_calories" />
 
 </navigation>

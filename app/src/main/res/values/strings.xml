@@ -9,19 +9,22 @@
     <string name="score">score</string>
     <string name="autoBMI">Dein BMI</string>
     <string name="CaloriesHint">Dein Kalorienbedarf</string>
+    <string name="primal_score">Dein Primal Ergebnis</string>
+
 
         <!-- MENU & NAVIGATION -->
     <string name="nav_header_title">Primal Lifestyle</string>
     <string name="nav_header_subtitle">Es liegt in deiner Natur!</string>
     <string name="menu_home">Home</string>
     <string name="menu_myprofile">Mein Profil</string>
-
     <string name="quiz_text">Quiz</string>
     <string name="menu_training">Trainingspläne</string>
+    <string name="menu_bmi">BMI-Rechner</string>
+    <string name="menu_myprofile_edit">Mein Profil ändern</string>
+    <string name="menu_calories_calc">Kalorienbedarfsrechner</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
 
         <!-- BUTTONS -->
     <string name="action_settings">Settings</string>
@@ -31,7 +34,6 @@
     <string name="edit_button">Ändern</string>
     <string name="abbrechen">Abbrechen</string>
     <string name="score_im_profil_speichern">Score im Profil speichern</string>
-    <string name="menu_myprofile_edit">Mein Profil ändern</string>
 
 
         <!-- EDITABLE-->
