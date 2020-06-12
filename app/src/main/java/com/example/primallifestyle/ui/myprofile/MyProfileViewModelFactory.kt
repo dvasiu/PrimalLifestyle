@@ -11,7 +11,7 @@ class MyProfileViewModelFactory(
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MyProfileViewModel::class.java)) {
-            return MyProfileViewModel(dataSource, application) as T
+            return MyProfileViewModel(application) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

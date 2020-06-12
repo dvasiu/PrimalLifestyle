@@ -12,6 +12,9 @@ import androidx.navigation.findNavController
 import com.example.primallifestyle.R
 import com.example.primallifestyle.ui.database.PrimalDatabase
 import com.example.primallifestyle.databinding.FragmentMyprofileBinding
+import com.example.primallifestyle.ui.database.PrimalData
+import com.example.primallifestyle.ui.database.PrimalDatabaseDao
+import com.example.primallifestyle.ui.database.PrimalDatabaseDao_Impl
 import com.example.primallifestyle.ui.quiz.QuizFragment
 import kotlinx.android.synthetic.main.fragment_quiz.*
 import kotlinx.coroutines.CoroutineScope
@@ -43,6 +46,8 @@ class MyProfileFragment : Fragment() {
         binding.setLifecycleOwner(this)
         binding.editButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_nav_myprofile_to_nav_myprofile_edit)
+
+            println("jo")
         }
 //        binding.nonEditScore.text = testingVar
 
