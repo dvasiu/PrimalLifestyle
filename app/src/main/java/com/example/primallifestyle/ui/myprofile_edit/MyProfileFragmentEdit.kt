@@ -43,7 +43,6 @@ class MyProfileFragmentEdit : Fragment() {
         binding.saveButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_nav_myprofile_edit_to_nav_myprofile)
         }
-//        binding.nonEditScore.text = testingVar
 
         return binding.root
     }
