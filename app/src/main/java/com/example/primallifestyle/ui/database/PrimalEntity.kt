@@ -1,4 +1,4 @@
-package com.example.android.primallifestyle.database
+package com.example.primallifestyle.ui.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "primal_database")
 data class PrimalData(
     @PrimaryKey(autoGenerate = true)
-    var primalId: Long = 0L,
+    var primalId: Int,
 
     @ColumnInfo(name = "username")
     var username: String,

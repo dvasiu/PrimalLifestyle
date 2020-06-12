@@ -1,4 +1,4 @@
-package com.example.android.primallifestyle.database
+package com.example.primallifestyle.ui.database
 
 import android.content.Context
 import androidx.room.Database
