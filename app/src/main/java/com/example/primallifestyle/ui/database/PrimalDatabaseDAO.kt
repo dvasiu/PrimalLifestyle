@@ -13,8 +13,11 @@ interface PrimalDatabaseDao {
     @Update
     fun update(primal: PrimalData)
 
-    @Query("SELECT * from primal_database WHERE primalId = :key")
-    fun getUser(key: Long): LiveData<List<PrimalData>>
+    @Query("SELECT * from primal_database")
+    fun getAll(): Array<PrimalData>
+
+    @Query("SELECT * from primal_database WHERE username = :username")
+    fun getUser(username: String): LiveData<List<PrimalData>>
 
     @Query("DELETE FROM primal_database")
     fun clear()
