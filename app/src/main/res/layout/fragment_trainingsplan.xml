@@ -1,24 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.trainingsplan.TrainingsplanFragment">
-
-
+    tools:context=".MainActivity">
+    <!-- This is just for the name of the project -->
     <TextView
-        android:id="@+id/text_trainingsplan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/textView"
+        android:text="Expandable Text View"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+    <!-- This is the actual mandatory library attributes that must be used -->
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/expand_text_view"
+        android:layout_width="match_parent"
+        android:layout_below="@id/textView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        expandableTextView:maxCollapsedLines="4"
+        expandableTextView:animDuration="200">
+
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@mipmap/plan1"
+            android:textSize="16sp"
+            android:textColor="#666666" />
+
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_gravity="right|bottom"
+            android:background="@android:color/transparent"/>
+
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView4"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="-->
+<!--            Zeit: 12-24 Minuten\n-->
+<!--            Für Einsteiger"-->
+<!--            tools:layout_editor_absoluteX="48dp"-->
+<!--            tools:layout_editor_absoluteY="32dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/plan1"-->
+<!--            style="@style/Widget.AppCompat.Button.Colored"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/plan1"-->
+<!--            tools:layout_editor_absoluteX="241dp"-->
+<!--            tools:layout_editor_absoluteY="32dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/plan2"-->
+<!--            style="@style/Widget.AppCompat.Button.Colored"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/plan2"-->
+<!--            tools:layout_editor_absoluteX="191dp"-->
+<!--            tools:layout_editor_absoluteY="171dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/plan3"-->
+<!--            style="@style/Widget.AppCompat.Button.Colored"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/plan3"-->
+<!--            tools:layout_editor_absoluteX="117dp"-->
+<!--            tools:layout_editor_absoluteY="295dp" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/plan4"-->
+<!--            style="@style/Widget.AppCompat.Button.Colored"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/plan3"-->
+<!--            tools:layout_editor_absoluteX="117dp"-->
+<!--            tools:layout_editor_absoluteY="491dp" />-->
+
