@@ -23,13 +23,11 @@ class TrainingsplanFragment : Fragment() {
         trainingsplanViewModel =
             ViewModelProvider(this).get(TrainingsplanViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_trainingsplan, container, false)
-        val textView: TextView = root.findViewById(R.id.textView)
+        val textView: TextView = root.findViewById(R.id.trainingsplan1ID)
         trainingsplanViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
 
 
-            val expTv: ExpandableTextView = root.findViewById(R.id.expand_text_view)
-            expTv.setText("Expandable Text View is an android library that allows the users to create the text view which can expand and collapse to read the text description. I bet you guys have seen this in a lot of android applications but might not know the name and its purpose. Well, below is a screenshot of the Instagram application on the Play store. This feature saves a lot of space, rather than laying out the huge chunks of information and occupying the entire page we can further use this option and can utilize the space")
 
         })
         return root

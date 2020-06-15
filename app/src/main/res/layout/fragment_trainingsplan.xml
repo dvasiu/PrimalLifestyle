@@ -1,105 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <!-- This is just for the name of the project -->
+    tools:context=".ui.trainingsplan.TrainingsplanFragment">
+
+    <!--    TRAININGSPLAN 1-->
+
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/trainingsplan1ID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/trainingsplan_1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/labelInfoTraining1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTrainingsplan1"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:text="Expandable Text View"
-        android:gravity="center"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginEnd="16dp"
+        android:text="@string/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trainingsplan1ID" />
 
-    <!-- This is the actual mandatory library attributes that must be used -->
-    <com.ms.square.android.expandabletextview.ExpandableTextView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/expand_text_view"
-        android:layout_width="match_parent"
-        android:layout_below="@id/textView"
+    <TextView
+        android:id="@+id/labelInfoTraining1"
+        android:layout_width="347dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/info_training1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    TRAININGSPLAN 2-->
+
+    <TextView
+        android:id="@+id/labelInfoTraining2"
+        android:layout_width="344dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/info_training2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelInfoTraining1" />
+
+    <Button
+        android:id="@+id/buttonTrainingsplan2"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        expandableTextView:maxCollapsedLines="4"
-        expandableTextView:animDuration="200">
+        android:layout_marginEnd="16dp"
+        android:text="@string/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trainingsplan2ID" />
 
-        <TextView
-            android:id="@id/expandable_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@mipmap/plan1"
-            android:textSize="16sp"
-            android:textColor="#666666" />
+    <TextView
+        android:id="@+id/trainingsplan2ID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/trainingsplan_2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/labelInfoTraining2"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
-            android:id="@id/expand_collapse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:layout_gravity="right|bottom"
-            android:background="@android:color/transparent"/>
+    <!--    TRAININGSPLAN 3-->
 
-    </com.ms.square.android.expandabletextview.ExpandableTextView>
+    <TextView
+        android:id="@+id/labelInfoTraining3"
+        android:layout_width="347dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/info_training3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelInfoTraining2" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/trainingsplan3ID"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/trainingsplan_3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/labelInfoTraining3"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/buttonTrainingsplan3"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trainingsplan3ID" />
 
+    <!--    TRAININGSPLAN 4-->
 
+    <TextView
+        android:id="@+id/labelInfoTraining4"
+        android:layout_width="344dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/info_training4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelInfoTraining3"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/trainingsplan4ID"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/trainingsplan_4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/labelInfoTraining4"
+        app:layout_constraintStart_toStartOf="parent" />
 
-
-
-<!--        <TextView-->
-<!--            android:id="@+id/textView4"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="-->
-<!--            Zeit: 12-24 Minuten\n-->
-<!--            Für Einsteiger"-->
-<!--            tools:layout_editor_absoluteX="48dp"-->
-<!--            tools:layout_editor_absoluteY="32dp" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/plan1"-->
-<!--            style="@style/Widget.AppCompat.Button.Colored"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/plan1"-->
-<!--            tools:layout_editor_absoluteX="241dp"-->
-<!--            tools:layout_editor_absoluteY="32dp" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/plan2"-->
-<!--            style="@style/Widget.AppCompat.Button.Colored"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/plan2"-->
-<!--            tools:layout_editor_absoluteX="191dp"-->
-<!--            tools:layout_editor_absoluteY="171dp" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/plan3"-->
-<!--            style="@style/Widget.AppCompat.Button.Colored"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/plan3"-->
-<!--            tools:layout_editor_absoluteX="117dp"-->
-<!--            tools:layout_editor_absoluteY="295dp" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/plan4"-->
-<!--            style="@style/Widget.AppCompat.Button.Colored"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/plan3"-->
-<!--            tools:layout_editor_absoluteX="117dp"-->
-<!--            tools:layout_editor_absoluteY="491dp" />-->
-
+    <Button
+        android:id="@+id/buttonTrainingsplan4"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/start_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/trainingsplan4ID" />
+</androidx.constraintlayout.widget.ConstraintLayout>

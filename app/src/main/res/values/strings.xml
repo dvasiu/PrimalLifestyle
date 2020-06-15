@@ -12,7 +12,7 @@
     <string name="primal_score">Dein Primal Ergebnis</string>
 
 
-        <!-- MENU & NAVIGATION -->
+    <!-- MENU & NAVIGATION -->
     <string name="nav_header_title">Primal Lifestyle</string>
     <string name="nav_header_subtitle">Es liegt in deiner Natur!</string>
     <string name="menu_home">Home</string>
@@ -26,7 +26,8 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-        <!-- BUTTONS -->
+
+    <!-- BUTTONS -->
     <string name="action_settings">Settings</string>
     <string name="submit_button">Weiter</string>
     <string name="next_match">Erneut antworten</string>
@@ -34,9 +35,10 @@
     <string name="edit_button">Ändern</string>
     <string name="abbrechen">Abbrechen</string>
     <string name="score_im_profil_speichern">Score im Profil speichern</string>
+    <string name="start_button">Start</string>
 
 
-        <!-- EDITABLE-->
+    <!-- EDITABLE-->
     <string name="editWeight">Gib dein Gewicht ein</string>
     <string name="editName">Gib deinen Namen ein</string>
     <string name="editUsername">Gib deinen Usernamen ein</string>
@@ -48,7 +50,7 @@
     </string-array>
 
 
-        <!-- LABELS -->
+    <!-- LABELS -->
     <string name="labelWeight">Gewicht</string>
     <string name="labelName">Dein Name</string>
     <string name="labelUsername">Username</string>
@@ -57,5 +59,26 @@
     <string name="labelBMI">BMI</string>
     <string name="labelCalories">Kalorienbedarf</string>
     <string name="labelScore">Primal Score</string>
+
+
+    <!-- ******* TRAININGSPLÄNE ******* -->
+
+    <!-- TRAINING 1-->
+    <string name="info_training1">Dauer: 12–24 Minuten\nFür Einsteiger mit schlechter Beweglichkeit\nbenötigt Stuhl und Handtuch\nArt: Zirkeltraining</string>
+    <string name="trainingsplan_1">Trainingsplan 1</string>
+
+    <!-- TRAINING 2-->
+    <string name="info_training2">Dauer: 18–30 Minuten\nFür Einsteiger mit guter Körperspannung\nbenötigt Stuhl, Matte, 2 Flaschen, 6er Pack\nArt: Zirkeltraining</string>
+    <string name="trainingsplan_2">Trainingsplan 2</string>
+
+    <!-- TRAINING 3-->
+    <string name="info_training3">Dauer: 22–38 Minuten\nFür Fortgeschrittene mit guter Technik\nbenötigt Stuhl, Tisch, Matte, 2 Flaschen, 6er Pack\nArt: Zirkeltraining</string>
+    <string name="trainingsplan_3">Trainingsplan 3</string>
+
+    <!-- TRAINING 4-->
+    <string name="info_training4">Dauer: 40–58 Minuten\nFür Fortgeschrittene | funktionell\nbenötigt Stuhl, Matte, Handtuch, 6er Pack\nArt: Zirkeltraining</string>
+    <string name="trainingsplan_4">Trainingsplan 4</string>
+
+
 
 </resources>
