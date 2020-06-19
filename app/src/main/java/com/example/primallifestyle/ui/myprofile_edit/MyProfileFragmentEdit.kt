@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -16,6 +17,8 @@ import com.example.primallifestyle.ui.database.PrimalDatabase
 import com.example.primallifestyle.databinding.FragmentMyprofileEditBinding
 import com.example.primallifestyle.ui.myprofile.MyProfileViewModelFactoryEdit
 import com.example.primallifestyle.MainActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_myprofile.*
 import kotlinx.android.synthetic.main.fragment_myprofile_edit.*
 
@@ -53,33 +56,35 @@ class MyProfileFragmentEdit : Fragment() {
 
         //handle save button click. input data and save in shared preferences
         binding.saveBtn2.setOnClickListener {
+            view
             //input data
+
             val username = binding.usernameID2.text.toString().trim()
-            val age = Integer.parseInt(binding.ageID.text.toString().trim())
-            val weight = Integer.parseInt(binding.weightID.text.toString().trim())
+            val age = binding.ageID.text.toString().trim()
+            val weight = binding.weightID.text.toString().trim()
 
             //edit data
             val editor = sharedPreferences.edit()
+
+
             //put data in shared preferences
             editor.putString("NAME", username)
-            editor.putInt("AGE", age)
-            editor.putInt("WEIGHT", weight)
+            editor.putString("AGE", age)
+            editor.putString("WEIGHT", weight)
 
             //Apply changes to shared preferences
             editor.apply()
+            view?.let { it1 ->
+                Snackbar.make(it1, "Daten wurden gespeichert", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show()
+            }
+
+
         }
-
-
-
-
-//        editUsername = findViewById(R.id.editUsernameProfile)
-//        findViewById<Button>(R.id.saveButtonProfile).setOnClickListener {
-//            saveData()
-//        }
-
 
 
         return binding.root
     }
+
 }
 

@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Verbesserungsvorschläge bitte an folgende Adresse senden: kristian.ristic@gmail.com", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
@@ -52,83 +52,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_training, R.id.nav_myprofile, R.id.nav_bmi, R.id.nav_calories, R.id.nav_quizFragment), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-
-
-
-
-//        //Shared Preferences
-//        val sharedPreferences = getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
-//
-//        //handle save button click. input data and save in shared preferences
-//        saveButtonProfile.setOnClickListener{
-//            //input data
-//            val username = editUsernameProfile.text.toString().trim()
-//            val age = Integer.parseInt(editAge.text.toString().trim())
-//            val weight = Integer.parseInt(editWeight.text.toString().trim())
-//
-//            //edit data
-//            val editor = sharedPreferences.edit()
-//            //put data in shared preferences
-//            editor.putString("NAME", username)
-//            editor.putInt("AGE", age)
-//            editor.putInt("WEIGHT", weight)
-//
-//            //Apply changes to shared preferences
-//            editor.apply()
-//
-//        }
-//
-
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//    private fun saveData() {
-//        if(editUsername.text.isEmpty()) {
-//            editUsername.error = "Please enter a name"
-//            return
-//        }
-//
-//        val mypref = getSharedPreferences("mypref", Context.MODE_PRIVATE)
-//
-//        val editor = mypref.edit()
-//
-//        editor.putString("username", editUsername.text.toString())
-//        editor.apply()
-//        Toast.makeText(this, "DAta saved", Toast.LENGTH_LONG).show()
-//    }
-//
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -141,33 +65,5 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
-//    //saving data
-//    fun saveData(view: View) {
-//        val sharedPref = this.getPreferences(Context.MODE_PRIVATE) ?: return
-//        with(sharedPref.edit()) {
-//            putString("name", editUsername.text.toString())
-//            putInt("number", editAge.text.toString().toInt())
-//            commit()
-//        }
-//    }
-//
-//    //saving data
-//    fun saveData(view: View) {
-//        val sharedPref = this.getSharedPreferences(getString(R.string.editUsername), Context.MODE_PRIVATE) ?: return
-//        with(sharedPref.edit()) {
-//            putString("name", username.text.toString())
-//            putInt("number", editAge.text.toString().toInt())
-//            commit()
-//        }
-//    }
-//
-//    fun getData(view: View) {
-//        val sharedPref = this.getPreferences(Context.MODE_PRIVATE) ?: return
-//        val str_name = sharedPref.getString("name", "")
-//        val int_number = sharedPref.getInt("number", 0)
-//        Toast.makeText(this, "$str_name $int_number", Toast.LENGTH_LONG).show()
-//
-//    }
 
 }
