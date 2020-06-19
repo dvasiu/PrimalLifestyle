@@ -32,9 +32,11 @@ class MyProfileFragmentEdit : Fragment() {
             inflater, R.layout.fragment_myprofile_edit, container, false
         )
         val application = requireNotNull(this.activity).application
+
         //Create an instance of the ViewModel Factory
         val dataSource = PrimalDatabase.getInstance(application).primalDatabaseDao
         val viewModelFactory = MyProfileViewModelFactoryEdit(dataSource, application)
+
         // Get a reference to the ViewModel associated with this fragment
         val myProfileViewModelEdit =
             ViewModelProvider(this, viewModelFactory).get(MyProfileViewModelEdit::class.java)
