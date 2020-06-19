@@ -16,6 +16,7 @@ import com.example.primallifestyle.ui.database.PrimalDatabase
 import com.example.primallifestyle.databinding.FragmentMyprofileEditBinding
 import com.example.primallifestyle.ui.myprofile.MyProfileViewModelFactoryEdit
 import com.example.primallifestyle.MainActivity
+import kotlinx.android.synthetic.main.fragment_myprofile.*
 import kotlinx.android.synthetic.main.fragment_myprofile_edit.*
 
 
@@ -45,30 +46,27 @@ class MyProfileFragmentEdit : Fragment() {
             ViewModelProvider(this, viewModelFactory).get(MyProfileViewModelEdit::class.java)
         binding.myProfileViewModelEdit = myProfileViewModelEdit
         binding.setLifecycleOwner(this)
-//        binding.saveButtonProfile.setOnClickListener { view: View ->
-//            view.findNavController().navigate(R.id.action_nav_myprofile_edit_to_nav_myprofile)
-        /*}*/
 
         //Shared Preferences
-        val sharedPreferences = requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
 
         //handle save button click. input data and save in shared preferences
-        binding.saveButtonProfile.setOnClickListener{
+        binding.saveBtn2.setOnClickListener {
             //input data
-            val username = editUsernameProfile.text.toString().trim()
-//            val age = Integer.parseInt(editAge.text.toString().trim())
-//            val weight = Integer.parseInt(editWeight.text.toString().trim())
+            val username = binding.usernameID2.text.toString().trim()
+            val age = Integer.parseInt(binding.ageID.text.toString().trim())
+            val weight = Integer.parseInt(binding.weightID.text.toString().trim())
 
             //edit data
             val editor = sharedPreferences.edit()
             //put data in shared preferences
-//            editor.putString("NAME", username)
-//            editor.putInt("AGE", age)
-//            editor.putInt("WEIGHT", weight)
+            editor.putString("NAME", username)
+            editor.putInt("AGE", age)
+            editor.putInt("WEIGHT", weight)
 
             //Apply changes to shared preferences
             editor.apply()
-
         }
 
 

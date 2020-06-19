@@ -1,5 +1,6 @@
 package com.example.primallifestyle.ui.myprofile
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,14 +13,8 @@ import androidx.navigation.findNavController
 import com.example.primallifestyle.R
 import com.example.primallifestyle.ui.database.PrimalDatabase
 import com.example.primallifestyle.databinding.FragmentMyprofileBinding
-import com.example.primallifestyle.ui.database.PrimalData
-import com.example.primallifestyle.ui.database.PrimalDatabaseDao
-import com.example.primallifestyle.ui.database.PrimalDatabaseDao_Impl
-import com.example.primallifestyle.ui.quiz.QuizFragment
-import kotlinx.android.synthetic.main.fragment_quiz.*
-import kotlinx.coroutines.CoroutineScope
-
-
+import kotlinx.android.synthetic.main.fragment_myprofile.*
+import com.example.primallifestyle.ui.myprofile_edit.*
 class MyProfileFragment : Fragment() {
 
     override fun onCreateView(
@@ -47,10 +42,42 @@ class MyProfileFragment : Fragment() {
         binding.editButton.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_nav_myprofile_to_nav_myprofile_edit)
 
-            println("jo")
         }
 //        binding.nonEditScore.text = testingVar
 
+        //Shared Preferences
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
+
+//        //handle save button click. input data and save in shared preferences
+//        binding.saveBtn.setOnClickListener {
+//            //input data
+//            val username = binding.editUsername.text.toString().trim()
+////            val age = Integer.parseInt(editAge.text.toString().trim())
+////            val weight = Integer.parseInt(editWeight.text.toString().trim())
+//
+//            //edit data
+//            val editor = sharedPreferences.edit()
+//            //put data in shared preferences
+//            editor.putString("NAME", username)
+////            editor.putInt("AGE", age)
+////            editor.putInt("WEIGHT", weight)
+//
+//            //Apply changes to shared preferences
+//            editor.apply()
+//        }
+
+        binding.editUsername.text = sharedPreferences.getString("NAME", "")
+        binding.editAge.text = sharedPreferences.getInt("AGE", 0).toString()
+        binding.editWeight.text = sharedPreferences.getInt("WEIGHT", 0).toString()
+//
+//        binding.showInfoBtn.setOnClickListener{
+//            val username = sharedPreferences.getString("NAME", "")
+//            val age = sharedPreferences.getInt("AGE", 0)
+//            val weight = sharedPreferences.getInt("WEIGHT", 0)
+//
+//            infoTV.text = "Name: $username, Age: $age, Weight: $weight"
+//        }
         return binding.root
     }
 }
