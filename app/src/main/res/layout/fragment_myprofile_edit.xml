@@ -17,6 +17,8 @@
         android:background="@color/colorBackground"
         tools:context=".ui.myprofile_edit.MyProfileFragmentEdit">
 
+<!--        tools:context=".ui.myprofile_edit.MyProfileFragmentEdit">-->
+
 
         <!-- TextView - right side of the fragment -->
 
@@ -29,11 +31,11 @@
             android:text="@string/labelUsername"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintBottom_toBottomOf="@+id/editUsername"
-            app:layout_constraintEnd_toStartOf="@+id/editUsername"
+            app:layout_constraintBottom_toBottomOf="@+id/editUsernameProfile"
+            app:layout_constraintEnd_toStartOf="@+id/editUsernameProfile"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="@+id/editUsername" />
+            app:layout_constraintTop_toTopOf="@+id/editUsernameProfile" />
 
         <TextView
             android:id="@+id/labelAge"
@@ -89,14 +91,13 @@
         <!-- EditText - right side of the fragment -->
 
         <EditText
-            android:id="@+id/editUsername"
+            android:id="@+id/editUsernameProfile"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="40dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/editUsername"
             android:inputType="textPersonName"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +115,7 @@
             android:inputType="number"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editUsername" />
+            app:layout_constraintTop_toBottomOf="@+id/editUsernameProfile" />
 
         <EditText
             android:id="@+id/editWeight"
@@ -146,7 +147,7 @@
 
 
         <Button
-            android:id="@+id/save_button"
+            android:id="@+id/saveButtonProfile"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -178,3 +179,5 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+<!--    android:hint="@string/editUsername"-->
