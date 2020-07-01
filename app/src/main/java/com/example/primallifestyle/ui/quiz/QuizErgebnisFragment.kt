@@ -29,6 +29,11 @@ class QuizErgebnisFragment : Fragment() {
             view.findNavController().navigate(action)
         }
 
+        binding.button3.setOnClickListener { view: View ->
+            val action = QuizErgebnisFragmentDirections.actionQuizErgebnisFragmentToNavHome()
+            view.findNavController().navigate(action)
+        }
+
         return binding.root
     }
 }
