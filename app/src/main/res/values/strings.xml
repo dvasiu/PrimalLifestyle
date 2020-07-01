@@ -89,6 +89,8 @@
     <string name="_0">0</string>
     <string name="berechnen">Berechnen</string>
     <string name="mainmenulogo">mainmenulogo</string>
+    <string name="fragment_trplan1">Trainingsplan 1</string>
+    <string name="trplan2Fragment">Trainingsplan 2</string>
 
 
 </resources>

@@ -29,6 +29,12 @@ class TrainingsplanFragment : Fragment() {
             view.findNavController().navigate(R.id.action_nav_training_to_nav_trplan1Fragment)
         }
 
+        binding.buttonTrainingsplan2.setOnClickListener { view: View ->
+            view.findNavController().navigate(R.id.action_nav_training_to_trplan2Fragment)
+        }
+
+
+
 //        trainingsplanViewModel =
 //            ViewModelProvider(this).get(TrainingsplanViewModel::class.java)
 //        val root = inflater.inflate(R.layout.fragment_trainingsplan, container, false)
