@@ -1,5 +1,6 @@
 package com.example.primallifestyle.ui.trainingsplan
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -29,6 +30,17 @@ class TrainingsplanFragment : Fragment() {
             view.findNavController().navigate(R.id.action_nav_training_to_nav_trplan1Fragment)
         }
 
+        val sharedPreferences =
+            requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
+
+        var rating1 = sharedPreferences.getString("Trainingsplan1", "")
+        println(rating1)
+        if (rating1 != null) {
+            binding.ratedBar1.rating = rating1.toFloat()
+        }
+
+
+
         binding.buttonTrainingsplan2.setOnClickListener { view: View ->
             view.findNavController().navigate(R.id.action_nav_training_to_trplan2Fragment)
         }
@@ -50,3 +62,4 @@ class TrainingsplanFragment : Fragment() {
         return binding.root
     }
 }
+

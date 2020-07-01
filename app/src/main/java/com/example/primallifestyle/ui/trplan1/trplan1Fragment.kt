@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RatingBar
+import android.widget.RatingBar.OnRatingBarChangeListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.primallifestyle.R
 import com.example.primallifestyle.databinding.FragmentTrplan1Binding
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_trplan1.*
 
 
 class trplan1Fragment : Fragment(){
@@ -27,11 +25,21 @@ class trplan1Fragment : Fragment(){
             inflater, R.layout.fragment_trplan1, container, false
         )
 
-
         val sharedPreferences =
             requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
 
-//        binding.ratingBar.setOnRatingBarChangeListener(ratingBar, )
+        val editor = sharedPreferences.edit()
+
+        binding.ratingBar.setOnRatingBarChangeListener(OnRatingBarChangeListener { ratingBar, rating, fromUser ->
+            val rateValue: String = java.lang.String.valueOf(ratingBar.getRating())
+            println("Rate for Module is$rateValue")
+            editor.putString("Trainingsplan1", rateValue)
+            editor.apply()
+
+            val rating1 = sharedPreferences.getString("Trainingsplan1", "").toString()
+            println("Value from Get is $rating1")
+
+        })
 
 
 
@@ -46,5 +54,6 @@ class trplan1Fragment : Fragment(){
 
         return binding.root
     }
+
 }
 
