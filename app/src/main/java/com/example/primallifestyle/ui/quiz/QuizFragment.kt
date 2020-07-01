@@ -105,7 +105,6 @@ class QuizFragment : Fragment() {
                         setQuestion()
                         binding.invalidateAll()
                     } else {
-                        // We've won!  Navigate to the gameWonFragment.
                         //view.findNavController().navigate(R.id.action_nav_quizFragment_to_quizErgebnisFragment)
                         val action = QuizFragmentDirections.actionNavQuizFragmentToQuizErgebnisFragment(
                             score.toString()
@@ -114,15 +113,6 @@ class QuizFragment : Fragment() {
                     }
                 }
 
-//            //edit data
-//            val editor = sharedPreferences.edit()
-//
-//
-//            //put data in shared preferences
-//            editor.putInt("SCORE", score)
-//
-//            //Apply changes to shared preferences
-//            editor.apply()
             }
         return binding.root
     }
@@ -134,36 +124,11 @@ class QuizFragment : Fragment() {
     }
 
     // Sets the question and randomizes the answers.  This only changes the data, not the UI.
-    // Calling invalidateAll on the FragmentGameBinding updates the data.
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
         // randomize the answers into a copy of the array
         answers = currentQuestion.answers.toMutableList()
-        // and shuffle them
-        //answers.shuffle()
-        //(activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_quiz_question, questionIndex + 1, numQuestions)
+
     }
 }
 
-/*
-class QuizFragment : Fragment() {
-    private lateinit var quizViewModel: QuizViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-       quizViewModel =
-           ViewModelProviders.of(this).get(QuizViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_quiz, container, false)
-        val textView: TextView = root.findViewById(R.id.quiz_text)
-        quizViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
-        // return super.onCreateView(inflater, container, savedInstanceState)
-    }
-}
-
-*/

@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.RatingBar.OnRatingBarChangeListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.primallifestyle.R
 import com.example.primallifestyle.databinding.FragmentTrplan1Binding
+import com.example.primallifestyle.ui.trplan1.trplan1FragmentDirections
 
 
 class trplan1Fragment : Fragment(){
@@ -39,9 +41,12 @@ class trplan1Fragment : Fragment(){
             val rating1 = sharedPreferences.getString("Trainingsplan1", "").toString()
             println("Value from Get is $rating1")
 
+            binding.button3.setOnClickListener { view: View ->
+                val action = trplan1FragmentDirections.actionNavTrplan1FragmentToNavTraining()
+                view.findNavController().navigate(action)
+            }
+
         })
-
-
 
 //        trplan1ViewModel =
 //            ViewModelProvider(this).get(trplan1ViewModel::class.java)

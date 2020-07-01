@@ -33,10 +33,17 @@ class TrainingsplanFragment : Fragment() {
         val sharedPreferences =
             requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
 
-        var rating1 = sharedPreferences.getString("Trainingsplan1", "")
+        var rating1 = sharedPreferences.getString("Trainingsplan1", "0")
         println(rating1)
         if (rating1 != null) {
             binding.ratedBar1.rating = rating1.toFloat()
+        }
+
+        var rating2 = sharedPreferences.getString("Trainingsplan2", "0")
+        println(rating2)
+
+        if (rating2 != null) {
+            binding.ratedBar2.rating = rating2.toFloat()
         }
 
 
@@ -61,5 +68,6 @@ class TrainingsplanFragment : Fragment() {
 
         return binding.root
     }
+
 }
 

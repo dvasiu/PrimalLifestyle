@@ -84,12 +84,20 @@
         android:id="@+id/nav_trplan1Fragment"
         android:name="com.example.primallifestyle.ui.trplan1.trplan1Fragment"
         android:label="@string/fragment_trplan1"
-        tools:layout="@layout/fragment_trplan1" />
+        tools:layout="@layout/fragment_trplan1" >
+        <action
+            android:id="@+id/action_nav_trplan1Fragment_to_nav_training"
+            app:destination="@id/nav_training" />
+    </fragment>
 
     <fragment
         android:id="@+id/trplan2Fragment"
         android:name="com.example.primallifestyle.ui.trplan2.trplan2Fragment"
         android:label="@string/trplan2Fragment"
-        tools:layout="@layout/fragment_trplan2"/>
+        tools:layout="@layout/fragment_trplan2">
+        <action
+            android:id="@+id/action_trplan2Fragment_to_nav_training"
+            app:destination="@id/nav_training" />
+    </fragment>
 
 </navigation>
