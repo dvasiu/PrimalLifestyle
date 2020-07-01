@@ -15,7 +15,11 @@
         android:id="@+id/nav_training"
         android:name="com.example.primallifestyle.ui.trainingsplan.TrainingsplanFragment"
         android:label="@string/menu_training"
-        tools:layout="@layout/fragment_trainingsplan" />
+        tools:layout="@layout/fragment_trainingsplan" >
+        <action
+            android:id="@+id/action_nav_training_to_nav_trplan1Fragment"
+            app:destination="@id/nav_trplan1Fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_quizFragment"
@@ -72,5 +76,10 @@
         android:name="com.example.primallifestyle.ui.calories.CaloriesFragment"
         android:label="@string/menu_calories_calc"
         tools:layout="@layout/fragment_calories" />
+    <fragment
+        android:id="@+id/nav_trplan1Fragment"
+        android:name="com.example.primallifestyle.ui.trplan1.trplan1Fragment"
+        android:label="fragment_trplan1"
+        tools:layout="@layout/fragment_trplan1" />
 
 </navigation>

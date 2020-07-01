@@ -13,11 +13,7 @@ import com.example.primallifestyle.databinding.FragmentMyprofileBinding
 
 class MyProfileFragment : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         // Get a reference to the binding object and inflate the fragment views.
         val binding: FragmentMyprofileBinding = DataBindingUtil.inflate(
@@ -39,8 +35,7 @@ class MyProfileFragment : Fragment() {
 //        binding.nonEditScore.text = sharedPreferences.getString("SCORE", "").toString()
 
 
-
-return binding.root
+        return binding.root
     }
 }
 
