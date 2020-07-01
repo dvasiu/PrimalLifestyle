@@ -26,12 +26,21 @@ class BMIFragment : Fragment() {
             inflater, R.layout.fragment_bmi, container, false
         )
         binding.berechnen.setOnClickListener {view: View ->
-            val cmText = binding.cmValue.getText().toString()
-            val cm = Integer.parseInt(cmText)
-            val kgText = binding.kgValue.getText().toString()
-            val kg = Integer.parseInt(kgText)
-            val bmi = cm/(kg*kg)
-            val bmiergebnis = bmi.toString()
+            var cmText = binding.cmValue.getText().toString()
+            println(cmText)
+            var cm = cmText.toDouble()
+            println(cm)
+            var m: Double = cm/100
+            println(m)
+            var kgText = binding.kgValue.getText().toString()
+            println(kgText)
+            var kg = kgText.toDouble()
+            println(kg)
+            var bmidouble: Double = kg/(m*m)
+            println(bmidouble)
+            var bmi: Int = bmidouble.toInt()
+            var bmiergebnis = bmi.toString()
+            println(bmiergebnis)
             binding.bmiValue.text = bmiergebnis
         }
         return binding.root
