@@ -35,8 +35,9 @@ class MyProfileFragment : Fragment() {
         binding.editUsername.text = sharedPreferences.getString("NAME", "")
         binding.editAge.text = sharedPreferences.getString("AGE", "").toString()
         binding.editWeight.text = sharedPreferences.getString("WEIGHT", "").toString()
-//        binding.editAge.text = sharedPreferences.getInt("AGE", 0).toString()
-//        binding.editWeight.text = sharedPreferences.getInt("WEIGHT", 0).toString()
+        binding.editHeight.text = sharedPreferences.getString("HEIGHT", "").toString()
+//        binding.nonEditScore.text = sharedPreferences.getString("SCORE", "").toString()
+
 
 
 return binding.root

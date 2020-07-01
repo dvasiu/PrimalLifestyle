@@ -50,8 +50,7 @@
             app:layout_constraintEnd_toStartOf="@+id/ageID"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="@+id/ageID"
-            app:layout_constraintVertical_bias="0.43" />
+            app:layout_constraintTop_toTopOf="@+id/ageID" />
 
         <TextView
             android:id="@+id/labelWeight"
@@ -66,9 +65,22 @@
             app:layout_constraintEnd_toStartOf="@+id/weightID"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="@+id/weightID"
-            app:layout_constraintVertical_bias="0.35" />
+            app:layout_constraintTop_toTopOf="@+id/weightID" />
 
+        <TextView
+            android:id="@+id/labelHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/labelHeight"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/heightID"
+            app:layout_constraintEnd_toStartOf="@+id/heightID"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/heightID" />
 
 
 
@@ -111,6 +123,19 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ageID" />
+
+        <EditText
+            android:id="@+id/heightID"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:autofillHints=""
+            android:hint="@string/editHeight"
+            android:inputType="number"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weightID" />
 
 
         <Button

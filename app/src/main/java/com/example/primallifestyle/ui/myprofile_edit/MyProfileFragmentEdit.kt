@@ -21,6 +21,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_myprofile.*
 import kotlinx.android.synthetic.main.fragment_myprofile_edit.*
+import kotlinx.android.synthetic.main.fragment_quiz.*
+import kotlinx.android.synthetic.main.fragment_quiz_ergebnis.*
 
 
 class MyProfileFragmentEdit : Fragment() {
@@ -62,6 +64,7 @@ class MyProfileFragmentEdit : Fragment() {
             val username = binding.usernameID2.text.toString().trim()
             val age = binding.ageID.text.toString().trim()
             val weight = binding.weightID.text.toString().trim()
+            val height = binding.heightID.text.toString().trim()
 
             //edit data
             val editor = sharedPreferences.edit()
@@ -71,6 +74,8 @@ class MyProfileFragmentEdit : Fragment() {
             editor.putString("NAME", username)
             editor.putString("AGE", age)
             editor.putString("WEIGHT", weight)
+            editor.putString("HEIGHT", height)
+
 
             //Apply changes to shared preferences
             editor.apply()

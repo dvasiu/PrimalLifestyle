@@ -66,6 +66,21 @@
             app:layout_constraintTop_toTopOf="@+id/editWeight" />
 
         <TextView
+            android:id="@+id/labelHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/labelHeight"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/editHeight"
+            app:layout_constraintEnd_toStartOf="@+id/editHeight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/editHeight" />
+
+        <TextView
             android:id="@+id/labelBMI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -156,6 +171,20 @@
             app:layout_constraintTop_toBottomOf="@+id/editAge" />
 
         <TextView
+            android:id="@+id/editHeight"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="50dp"
+            android:textAlignment="textEnd"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editWeight" />
+
+        <TextView
             android:id="@+id/nonEditBMI"
             android:layout_width="130dp"
             android:layout_height="40dp"
@@ -236,7 +265,7 @@
             app:layout_constraintBottom_toTopOf="@+id/nonEditBMI"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editWeight" />
+            app:layout_constraintTop_toBottomOf="@+id/editHeight" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

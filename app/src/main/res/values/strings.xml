@@ -43,6 +43,7 @@
     <string name="editName">Gib deinen Namen ein</string>
     <string name="editUsername">Gib deinen Usernamen ein</string>
     <string name="editAge">Gib dein Alter ein</string>
+    <string name="editHeight">Gib deine Größe ein</string>
     <string name="editGender">Wähle dein Geschlecht</string>
     <string-array name="arrayGender">
         <item>Männlich</item>
@@ -51,10 +52,11 @@
 
 
     <!-- LABELS -->
-    <string name="labelWeight">Gewicht</string>
+    <string name="labelWeight">Gewicht in kg</string>
     <string name="labelName">Dein Name</string>
     <string name="labelUsername">Username</string>
     <string name="labelAge">Alter</string>
+    <string name="labelHeight">Größe in cm</string>
     <string name="labelGender">Geschlecht</string>
     <string name="labelBMI">BMI</string>
     <string name="labelCalories">Kalorienbedarf</string>
@@ -86,6 +88,7 @@
     <string name="dein_bmi_wert_ist">Dein BMI Wert ist:</string>
     <string name="_0">0</string>
     <string name="berechnen">Berechnen</string>
+    <string name="mainmenulogo">mainmenulogo</string>
 
 
 </resources>

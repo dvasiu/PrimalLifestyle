@@ -54,7 +54,8 @@
     <fragment
         android:id="@+id/nav_myprofile_edit"
         android:name="com.example.primallifestyle.ui.myprofile_edit.MyProfileFragmentEdit"
-        android:label="@string/menu_myprofile_edit" >
+        android:label="@string/menu_myprofile_edit"
+        tools:layout="@layout/fragment_myprofile_edit">
         <action
             android:id="@+id/action_nav_myprofile_edit_to_nav_myprofile"
             app:destination="@id/nav_myprofile" />

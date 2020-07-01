@@ -1,5 +1,6 @@
 package com.example.primallifestyle.ui.quiz
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import com.example.primallifestyle.R
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.primallifestyle.databinding.FragmentQuizBinding
+import com.google.android.material.snackbar.Snackbar
 
 
 class QuizFragment : Fragment() {
@@ -61,6 +63,10 @@ class QuizFragment : Fragment() {
 
         var score = 0
 
+//        //Shared Preferences
+//        val sharedPreferences =
+//            requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
+
         // Set the onClickListener for the submitButton
         binding.submitButton.setOnClickListener { view: View ->
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
@@ -107,6 +113,16 @@ class QuizFragment : Fragment() {
                         view.findNavController().navigate(action)
                     }
                 }
+
+//            //edit data
+//            val editor = sharedPreferences.edit()
+//
+//
+//            //put data in shared preferences
+//            editor.putInt("SCORE", score)
+//
+//            //Apply changes to shared preferences
+//            editor.apply()
             }
         return binding.root
     }
