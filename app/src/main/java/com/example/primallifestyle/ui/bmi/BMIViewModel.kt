@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class BMIViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is a BMI Fragment"
+        value = ""
     }
     val text: LiveData<String> = _text
 }

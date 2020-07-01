@@ -4,28 +4,37 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.primallifestyle.R
+import com.example.primallifestyle.databinding.FragmentBmiBinding
+import kotlin.math.pow
+
+
+
 
 class BMIFragment : Fragment() {
 
-    private lateinit var bmiViewModel: BMIViewModel
-
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
-        bmiViewModel =
-                ViewModelProvider(this).get(BMIViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_bmi, container, false)
-        val textView: TextView = root.findViewById(R.id.text_bmi)
-        bmiViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+
+        // Get a reference to the binding object and inflate the fragment views.
+        val binding = DataBindingUtil.inflate<FragmentBmiBinding>(
+            inflater, R.layout.fragment_bmi, container, false
+        )
+        binding.berechnen.setOnClickListener {view: View ->
+            val cmText = binding.cmValue.getText().toString()
+            val cm = Integer.parseInt(cmText)
+            val kgText = binding.kgValue.getText().toString()
+            val kg = Integer.parseInt(kgText)
+            val bmi = cm/(kg*kg)
+            val bmiergebnis = bmi.toString()
+            binding.bmiValue.text = bmiergebnis
+        }
+        return binding.root
     }
 }
+

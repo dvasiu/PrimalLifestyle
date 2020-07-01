@@ -33,13 +33,13 @@ class QuizFragment : Fragment() {
         Question(text = "Wie oft isst du unverarbeitetes Fleisch (Filet, Steak, etc)?",
             answers = listOf("nie", "selten", "gelegentlich", "oft", "jeden Tag")),
         Question(text = "Wie viele Stunden verbringst du täglich sitzend (PC, Laptop, Fernsehen)?",
-            answers = listOf("Mehr als 8", "Zwischen 4 und 8", "Zwischen 2 und 4", "Weniger als zwei", "Keine")),
+            answers = listOf("Keine", "Weniger als zwei", "Zwischen 2 und 4", "Zwischen 4 und 8", "Mehr als 8")),
         Question(text = "Wie viele Schritte gehst du am Tag?",
-            answers = listOf("Weniger als 2.000", "Zwischen 2.000 und 4.000", "Zwischen 4.000 und 6.000", "Zwischen 6.000 und 8.000", "Mehr als 10.000")),
+            answers = listOf("Mehr als 8.000",  "Zwischen 6.000 und 8.000", "Zwischen 4.000 und 6.000", "Zwischen 2.000 und 4.000", "Weniger als 2.000")),
         Question(text = "Wie oft in der Woche machst du Sport?",
-            answers = listOf("Nie", "1 Mal", "2 oder 3 Mal", "4 oder 5 Mal", "6 oder 7 Mal")),
+            answers = listOf("6 oder 7 Mal", "4 oder 5 Mal", "2 oder 3 Mal", "1 Mal", "Nie")),
         Question(text = "Wie oft in der Woche machst du Dehnübungen (auch Mobilitisation oder Yoga)?",
-        answers = listOf("Nie", "1 Mal", "2 oder 3 Mal", "4 oder 5 Mal", "6 oder 7 Mal"))
+        answers = listOf("6 oder 7 Mal", "4 oder 5 Mal", "2 oder 3 Mal", "1 Mal", "Nie"))
     )
 
     lateinit var currentQuestion: Question
