@@ -54,14 +54,6 @@ class TrainingsplanFragment : Fragment() {
 
 
 
-//        trainingsplanViewModel =
-//            ViewModelProvider(this).get(TrainingsplanViewModel::class.java)
-//        val root = inflater.inflate(R.layout.fragment_trainingsplan, container, false)
-//        val textView: TextView = root.findViewById(R.id.trainingsplan1ID)
-//        trainingsplanViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//            }
-//        )
 
 
 

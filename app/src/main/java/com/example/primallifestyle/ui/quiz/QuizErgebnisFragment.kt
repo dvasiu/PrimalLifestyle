@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.primallifestyle.R
 import com.example.primallifestyle.databinding.FragmentQuizErgebnisBinding
+import com.example.primallifestyle.ui.quiz.QuizErgebnisFragmentDirections
 
 class QuizErgebnisFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -23,14 +24,11 @@ class QuizErgebnisFragment : Fragment() {
 
         binding.textView3.text = args.score
 
-        binding.button.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_quizErgebnisFragment_to_nav_home)
+        binding.nextMatchButton.setOnClickListener { view: View ->
+            val action = QuizErgebnisFragmentDirections.actionQuizErgebnisFragmentToNavQuizFragment()
+            view.findNavController().navigate(action)
         }
 
-
-//        binding.nextMatchButton.setOnClickListener { view: View ->
-//            view.findNavController().navigate(R.id.action_quizErgebnisFragment_to_nav_quizFragment)
-//        }
         return binding.root
     }
 }

@@ -48,14 +48,6 @@ class trplan1Fragment : Fragment(){
 
         })
 
-//        trplan1ViewModel =
-//            ViewModelProvider(this).get(trplan1ViewModel::class.java)
-//        val root = inflater.inflate(R.layout.fragment_trplan1, container, false)
-//        val textView: TextView = root.findViewById(R.id.trplan1ID)
-//        trplan1ViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it }
-//        )
-
 
         return binding.root
     }

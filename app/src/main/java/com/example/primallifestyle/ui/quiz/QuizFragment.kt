@@ -63,10 +63,6 @@ class QuizFragment : Fragment() {
 
         var score = 0
 
-//        //Shared Preferences
-//        val sharedPreferences =
-//            requireActivity().getSharedPreferences("SP_INFO", Context.MODE_PRIVATE)
-
         // Set the onClickListener for the submitButton
         binding.submitButton.setOnClickListener { view: View ->
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
