@@ -24,7 +24,7 @@
             android:id="@+id/labelUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="16dp"
             android:text="@string/labelUsername"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -39,7 +39,7 @@
             android:id="@+id/labelAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="16dp"
             android:text="@string/labelAge"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -54,7 +54,7 @@
             android:id="@+id/labelWeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="16dp"
             android:text="@string/labelWeight"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -69,7 +69,7 @@
             android:id="@+id/labelHeight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="16dp"
             android:text="@string/labelHeight"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -80,51 +80,6 @@
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toTopOf="@+id/editHeight" />
 
-        <TextView
-            android:id="@+id/labelBMI"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/labelBMI"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintBottom_toBottomOf="@+id/nonEditBMI"
-            app:layout_constraintEnd_toStartOf="@+id/nonEditBMI"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="@+id/nonEditBMI" />
-
-        <TextView
-            android:id="@+id/labelCalories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/labelCalories"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintBottom_toBottomOf="@+id/nonEditCalories"
-            app:layout_constraintEnd_toStartOf="@+id/nonEditCalories"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="@+id/nonEditCalories" />
-
-        <TextView
-            android:id="@+id/labelScore"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/labelScore"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintBottom_toBottomOf="@+id/nonEditScore"
-            app:layout_constraintEnd_toStartOf="@+id/nonEditScore"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline5"
-            app:layout_constraintTop_toTopOf="@+id/nonEditScore" />
-
 
         <!-- EditText - right side of the fragment -->
 
@@ -133,7 +88,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="20dp"
             android:textAlignment="textEnd"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -147,7 +102,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="20dp"
             android:textAlignment="textEnd"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -161,7 +116,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="20dp"
             android:textAlignment="textEnd"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -175,7 +130,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="20dp"
             android:textAlignment="textEnd"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -183,64 +138,20 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editWeight" />
-
-        <TextView
-            android:id="@+id/nonEditBMI"
-            android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="96dp"
-            android:layout_marginEnd="50dp"
-            android:textAlignment="textEnd"
-            android:textAllCaps="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editWeight" />
-
-        <TextView
-            android:id="@+id/nonEditCalories"
-            android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="50dp"
-            android:textAlignment="textEnd"
-            android:textAllCaps="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nonEditBMI" />
-
-        <TextView
-            android:id="@+id/nonEditScore"
-            android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="50dp"
-            android:textAlignment="textEnd"
-            android:textAllCaps="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nonEditCalories" />
 
         <Button
             android:id="@+id/edit_button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="48dp"
             android:text="@string/edit_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.007"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/labelScore"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintStart_toStartOf="parent" />
 
 
         <androidx.constraintlayout.widget.Guideline
@@ -261,11 +172,23 @@
             android:id="@+id/divider2"
             android:layout_width="300dp"
             android:layout_height="1dp"
+            android:layout_marginTop="68dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/nonEditBMI"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editHeight" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="227dp"
+            android:layout_height="201dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:layout_constraintVertical_bias="0.245"
+            app:srcCompat="@mipmap/primal_logo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
